@@ -26,21 +26,6 @@ namespace Codificador_Descodificador_QrCode
 
         private VideoCaptureDevice Video;
 
-
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            timer1.Enabled = true;
-            Video = new VideoCaptureDevice(Dispositivos[comboBox1.SelectedIndex].MonikerString);
-            videoSourcePlayer1.VideoSource = Video;
-            videoSourcePlayer1.Start();
-        }
-
-        private void videoSourcePlayer1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Decoder_Load(object sender, EventArgs e)
         {
             Dispositivos = new FilterInfoCollection(FilterCategory.VideoInputDevice);
@@ -53,13 +38,41 @@ namespace Codificador_Descodificador_QrCode
             comboBox1.SelectedIndex = 0;
         }
 
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            timer1.Enabled = true;
+            Video = new VideoCaptureDevice(Dispositivos[comboBox1.SelectedIndex].MonikerString);
+            videoSourcePlayer1.VideoSource = Video;
+            videoSourcePlayer1.Start();
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
             timer1.Enabled = false;
             videoSourcePlayer1.SignalToStop();
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+      /*  private void timer1_Tick(object sender, EventArgs e)
+                    if (videoSourcePlayer1.GetCurrentVideoFrame() != null)
+            {
+                Bitmap img = new Bitmap(videoSourcePlayer1.GetCurrentVideoFrame());
+                string[] resultado = BarcodeReader.read(img, BarcodeReader.QRCODE);
+                img.Dispose();
+
+                if (resultado != null && resultado.Count() > 0)
+                {
+                    listBox1.Items.Add(resultado[0]);
+                }
+            }
+        }
+        */
+        private void videoSourcePlayer1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick_1(object sender, EventArgs e)
         {
             if (videoSourcePlayer1.GetCurrentVideoFrame() != null)
             {
@@ -73,7 +86,5 @@ namespace Codificador_Descodificador_QrCode
                 }
             }
         }
-
-
     }
 }

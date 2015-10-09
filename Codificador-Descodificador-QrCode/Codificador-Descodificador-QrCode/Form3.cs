@@ -8,6 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Security;
+using System.Security.Cryptography;
+
 //teste
 namespace Codificador_Descodificador_QrCode
 {
@@ -32,8 +35,47 @@ namespace Codificador_Descodificador_QrCode
             Image imageQRCode;
             //string a ser gerada
             String data = textBox1.Text;
+
+            TripleDESCryptoServiceProvider tripledescryptoserviceprovider = new TripleDESCryptoServiceProvider();
+            MD5CryptoServiceProvider md5cryptoserviceprovider = new MD5CryptoServiceProvider();
+
+            try
+            {
+                if (data.Trim() != "")
+                {
+                    //Aqui vc inclui uma chave qualquer para servir de base para cifrar, que deve ser a mesma no método Decodificar
+                    string chave = "asdfg";
+                    tripledescryptoserviceprovider.Key = md5cryptoserviceprovider.ComputeHash(Encoding.Default.GetBytes(chave));
+                    tripledescryptoserviceprovider.Mode = CipherMode.ECB;
+                    ICryptoTransform desdencrypt = tripledescryptoserviceprovider.CreateEncryptor();
+                    byte[] buff = Encoding.Default.GetBytes(data);
+
+                //    return Convert.ToBase64String(desdencrypt.TransformFinalBlock(buff, 0, buff.Length));
+
+                }
+                else
+                {
+                   data = "";
+                }
+            }
+            catch (Exception exception)
+            {
+                throw exception;
+            }
+            finally
+            {
+                tripledescryptoserviceprovider = null;
+                md5cryptoserviceprovider = null;
+            }
+
+
             imageQRCode = qrCodecEncoder.Encode(data);
             pictureBox1.Image = imageQRCode;
+        }
+
+        private void Encoder_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
