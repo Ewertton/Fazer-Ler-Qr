@@ -11,7 +11,8 @@ using AForge.Video;
 using AForge.Video.DirectShow;
 using BarcodeLib.BarcodeReader;
 using MessagingToolkit.QRCode.Codec;
-
+using System.Security;
+using System.Security.Cryptography;
 
 namespace Codificador_Descodificador_QrCode
 {
@@ -53,24 +54,13 @@ namespace Codificador_Descodificador_QrCode
             videoSourcePlayer1.SignalToStop();
         }
 
-      /*  private void timer1_Tick(object sender, EventArgs e)
-                    if (videoSourcePlayer1.GetCurrentVideoFrame() != null)
-            {
-                Bitmap img = new Bitmap(videoSourcePlayer1.GetCurrentVideoFrame());
-                string[] resultado = BarcodeReader.read(img, BarcodeReader.QRCODE);
-                img.Dispose();
-
-                if (resultado != null && resultado.Count() > 0)
-                {
-                    listBox1.Items.Add(resultado[0]);
-                }
-            }
-        }
-        */
+      
         private void videoSourcePlayer1_Click(object sender, EventArgs e)
         {
 
         }
+
+        string desc;
 
         private void timer1_Tick_1(object sender, EventArgs e)
         {
@@ -80,11 +70,60 @@ namespace Codificador_Descodificador_QrCode
                 string[] resultado = BarcodeReader.read(img, BarcodeReader.QRCODE);
                 img.Dispose();
 
-                if (resultado != null && resultado.Count() > 0)
+                if (resultado != null && resultado.Count()>0)
                 {
                     listBox1.Items.Add(resultado[0]);
+                     desc = resultado[0];
+                }
+
+               
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            textBox1.Text = Decodificar(desc);
+        }
+
+        public static string Decodificar(string entrada)
+        {
+            TripleDESCryptoServiceProvider tripledescryptoserviceprovider = new TripleDESCryptoServiceProvider();
+            MD5CryptoServiceProvider md5cryptoserviceprovider = new MD5CryptoServiceProvider();
+
+            try
+            {
+                if (entrada.Trim() != "")
+                {
+                    string chave = "asdfg";
+                    tripledescryptoserviceprovider.Key = md5cryptoserviceprovider.ComputeHash(Encoding.Default.GetBytes(chave));
+                    tripledescryptoserviceprovider.Mode = CipherMode.ECB;
+                    ICryptoTransform desdencrypt = tripledescryptoserviceprovider.CreateDecryptor();
+                    byte[] buff = Convert.FromBase64String(entrada);
+
+                    return Encoding.Default.GetString(desdencrypt.TransformFinalBlock(buff, 0, buff.Length));
+                }
+                else
+                {
+                    return "";
                 }
             }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Erro" + exception.Message);
+                throw exception;
+            }
+            finally
+            {
+                tripledescryptoserviceprovider = null;
+                md5cryptoserviceprovider = null;
+            }
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -50,12 +50,12 @@ namespace Codificador_Descodificador_QrCode
                     ICryptoTransform desdencrypt = tripledescryptoserviceprovider.CreateEncryptor();
                     byte[] buff = Encoding.Default.GetBytes(data);
 
-                //    return Convert.ToBase64String(desdencrypt.TransformFinalBlock(buff, 0, buff.Length));
+            data =  Convert.ToBase64String(desdencrypt.TransformFinalBlock(buff, 0, buff.Length));
 
                 }
                 else
                 {
-                   data = "";
+                   data= "";
                 }
             }
             catch (Exception exception)
