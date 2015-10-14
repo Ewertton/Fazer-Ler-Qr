@@ -22,3 +22,23 @@ C:\Users\Ewertton\Documents\Visual Studio 2015\Projects\Codificador-Descodificad
 C:\Users\Ewertton\Documents\Visual Studio 2015\Projects\Codificador-Descodificador-QrCode\Codificador-Descodificador-QrCode\obj\Release\Codificador-Descodificador-QrCode.csproj.GenerateResource.Cache
 C:\Users\Ewertton\Documents\Visual Studio 2015\Projects\Codificador-Descodificador-QrCode\Codificador-Descodificador-QrCode\obj\Release\Codificador-Descodificador-QrCode.exe
 C:\Users\Ewertton\Documents\Visual Studio 2015\Projects\Codificador-Descodificador-QrCode\Codificador-Descodificador-QrCode\obj\Release\Codificador-Descodificador-QrCode.pdb
+C:\Users\Arthur Vinicius\Documents\Visual Studio 2015\Read-Write-Qr\Codificador-Descodificador-QrCode\Codificador-Descodificador-QrCode\bin\Release\Codificador-Descodificador-QrCode.exe.config
+C:\Users\Arthur Vinicius\Documents\Visual Studio 2015\Read-Write-Qr\Codificador-Descodificador-QrCode\Codificador-Descodificador-QrCode\obj\Release\Codificador-Descodificador-QrCode.exe
+C:\Users\Arthur Vinicius\Documents\Visual Studio 2015\Read-Write-Qr\Codificador-Descodificador-QrCode\Codificador-Descodificador-QrCode\obj\Release\Codificador-Descodificador-QrCode.pdb
+C:\Users\Arthur Vinicius\Documents\Visual Studio 2015\Read-Write-Qr\Codificador-Descodificador-QrCode\Codificador-Descodificador-QrCode\bin\Release\Codificador-Descodificador-QrCode.exe
+C:\Users\Arthur Vinicius\Documents\Visual Studio 2015\Read-Write-Qr\Codificador-Descodificador-QrCode\Codificador-Descodificador-QrCode\bin\Release\Codificador-Descodificador-QrCode.pdb
+C:\Users\Arthur Vinicius\Documents\Visual Studio 2015\Read-Write-Qr\Codificador-Descodificador-QrCode\Codificador-Descodificador-QrCode\bin\Release\MessagingToolkit.QRCode.dll
+C:\Users\Arthur Vinicius\Documents\Visual Studio 2015\Read-Write-Qr\Codificador-Descodificador-QrCode\Codificador-Descodificador-QrCode\bin\Release\AForge.Imaging.dll
+C:\Users\Arthur Vinicius\Documents\Visual Studio 2015\Read-Write-Qr\Codificador-Descodificador-QrCode\Codificador-Descodificador-QrCode\bin\Release\AForge.Math.dll
+C:\Users\Arthur Vinicius\Documents\Visual Studio 2015\Read-Write-Qr\Codificador-Descodificador-QrCode\Codificador-Descodificador-QrCode\bin\Release\AForge.xml
+C:\Users\Arthur Vinicius\Documents\Visual Studio 2015\Read-Write-Qr\Codificador-Descodificador-QrCode\Codificador-Descodificador-QrCode\bin\Release\AForge.Controls.xml
+C:\Users\Arthur Vinicius\Documents\Visual Studio 2015\Read-Write-Qr\Codificador-Descodificador-QrCode\Codificador-Descodificador-QrCode\bin\Release\AForge.Video.xml
+C:\Users\Arthur Vinicius\Documents\Visual Studio 2015\Read-Write-Qr\Codificador-Descodificador-QrCode\Codificador-Descodificador-QrCode\bin\Release\AForge.Video.DirectShow.xml
+C:\Users\Arthur Vinicius\Documents\Visual Studio 2015\Read-Write-Qr\Codificador-Descodificador-QrCode\Codificador-Descodificador-QrCode\bin\Release\AForge.Imaging.xml
+C:\Users\Arthur Vinicius\Documents\Visual Studio 2015\Read-Write-Qr\Codificador-Descodificador-QrCode\Codificador-Descodificador-QrCode\bin\Release\AForge.Math.xml
+C:\Users\Arthur Vinicius\Documents\Visual Studio 2015\Read-Write-Qr\Codificador-Descodificador-QrCode\Codificador-Descodificador-QrCode\obj\Release\Codificador-Descodificador-QrCode.csprojResolveAssemblyReference.cache
+C:\Users\Arthur Vinicius\Documents\Visual Studio 2015\Read-Write-Qr\Codificador-Descodificador-QrCode\Codificador-Descodificador-QrCode\obj\Release\Codificador_Descodificador_QrCode.FrmMain.resources
+C:\Users\Arthur Vinicius\Documents\Visual Studio 2015\Read-Write-Qr\Codificador-Descodificador-QrCode\Codificador-Descodificador-QrCode\obj\Release\Codificador_Descodificador_QrCode.Decoder.resources
+C:\Users\Arthur Vinicius\Documents\Visual Studio 2015\Read-Write-Qr\Codificador-Descodificador-QrCode\Codificador-Descodificador-QrCode\obj\Release\Codificador_Descodificador_QrCode.Encoder.resources
+C:\Users\Arthur Vinicius\Documents\Visual Studio 2015\Read-Write-Qr\Codificador-Descodificador-QrCode\Codificador-Descodificador-QrCode\obj\Release\Codificador_Descodificador_QrCode.Properties.Resources.resources
+C:\Users\Arthur Vinicius\Documents\Visual Studio 2015\Read-Write-Qr\Codificador-Descodificador-QrCode\Codificador-Descodificador-QrCode\obj\Release\Codificador-Descodificador-QrCode.csproj.GenerateResource.Cache

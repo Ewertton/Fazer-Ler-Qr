@@ -1,6 +1,6 @@
 ﻿namespace Codificador_Descodificador_QrCode
 {
-    partial class Form1
+    partial class FrmMain
     {
         /// <summary>
         /// Required designer variable.
