@@ -72,6 +72,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBox1);
             this.Name = "Encoder";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Encoder";
             this.Load += new System.EventHandler(this.Encoder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
